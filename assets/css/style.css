@@ -85,9 +85,12 @@ img {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  max-height: 350px;
+  max-height: 300px;
   overflow-y: scroll;
-  padding: 0 0.75rem 0 0.75rem;
+  padding: 0.75rem;
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth; /* Optional: Smooth scrolling */
+
 }
 
 .project-item {
@@ -95,12 +98,14 @@ img {
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
+  scroll-snap-align: center; /* Align each item at the start of the container when snapped */
 }
 
 .project-item:hover {
   background: #494949;
   transition: all 0.3s;
   box-shadow: 0 0 5px 5px #494949;
+  scale: 1.01;
 }
 
 a {
@@ -161,6 +166,10 @@ a {
 
 .link:hover {
   background: #48fbe9;
+}
+
+.empty-item {
+  height: 100px;
 }
 
 footer {

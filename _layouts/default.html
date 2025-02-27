@@ -8,6 +8,28 @@
 </head>
 <body>
 
+<!--<script>-->
+<!--    document.addEventListener('DOMContentLoaded', function() {-->
+<!--        const projectList = document.querySelector('.project-list');-->
+
+<!--        // Clone the first set of project items for the loop effect-->
+<!--        const items = projectList.querySelectorAll('.project-item');-->
+<!--        const clonedItems = Array.from(items).map(item => item.cloneNode(true));-->
+<!--        clonedItems.forEach(item => projectList.appendChild(item));-->
+
+<!--        // Function to handle the scrolling-->
+<!--        function handleScroll() {-->
+<!--            // If scrolled to the bottom, reset to the top-->
+<!--            if (projectList.scrollTop + projectList.clientHeight >= projectList.scrollHeight) {-->
+<!--                projectList.scrollTop = 0;-->
+<!--            }-->
+<!--        }-->
+
+<!--        // Add the scroll event listener-->
+<!--        projectList.addEventListener('scroll', handleScroll);-->
+<!--    });-->
+<!--</script>-->
+
 <div class="container">
     <h1>Welcome! I'm Andre</h1>
     <p>Have a look at some of my projects.</p>
@@ -20,7 +42,7 @@
     <h2>Featured Projects</h2>
 
 
-    <div class="project-list featured">
+    <div class="project-list featured" id='project-list'>
         <div class="project-item">
             <div class='title-row'>
                 <a href='https://github.com/andreberezin/match-me' class='github-link' target="_blank" title='Github repository'>
@@ -47,11 +69,14 @@
             <p class='description'>A real-time system for car races. Features creating, starting, controlling and spectating races live.</p>
             <p class='stack'>Javascript | Node.js | React | Mongodb | Ngrok | Socket.io  </p>
         </div>
+
+        <div class='empty-item'></div>
     </div>
 
     <!-- Other Projects Section -->
     <h2>Other Projects</h2>
     <div class="project-list other">
+
         <div class="project-item">
             <div class='title-row'>
                 <a href='https://github.com/andreberezin/movie-api' class='github-link' target="_blank" title='Github repository'>
@@ -103,6 +128,8 @@
             <p class='description'>A minimalist text editor with markdown support and real-time saving.</p>
             <p class='stack'>Golang</p>
         </div>
+
+        <div class='empty-item'></div>
     </div>
 </div>
 
