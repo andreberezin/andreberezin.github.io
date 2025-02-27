@@ -13,6 +13,39 @@ body {
   padding: 50px;
 }
 
+header {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.social-media-container {
+  position: absolute;
+  right: 10px;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.fa-brands {
+  font-size: 2rem;
+  padding: 5px;
+  margin-right: 0.3rem;
+  animation: blink-background 2s infinite;
+  color: transparent;
+  background-clip: text;
+}
+
+.fa-brands:hover {
+  scale: 1.1;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -116,6 +149,10 @@ img {
   scroll-behavior: smooth; /* Optional: Smooth scrolling */
 }
 
+/*.first {*/
+/*  border-top: 1px solid white;*/
+/*}*/
+
 .project-item {
   background: #222;
   padding: 15px;
@@ -182,12 +219,12 @@ a {
   box-shadow: 0 0 2px 2px #48fbe9;
 }
 
-.fa-brands {
-  font-size: 1.5rem;
-  width: 2rem;
-  color: black;
-  margin-right: 0.3rem;
-}
+/*.fa-brands {*/
+/*  font-size: 1.5rem;*/
+/*  width: 2rem;*/
+/*  color: black;*/
+/*  margin-right: 0.3rem;*/
+/*}*/
 
 .button-content {
   display: flex;
@@ -221,6 +258,8 @@ footer {
   color: #777;
 }
 
+
+/* animations /*/
 @keyframes blink  {
   0% { color: #18bc8a;}
   50% { color: #18bcbc;}
@@ -229,17 +268,17 @@ footer {
 
 @keyframes blink-background {
   0% {
-    background: linear-gradient(90deg, #18bcbc, #18bc8a);
+    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
     background-size: 200% 100%;
     background-position: 100% 0;
   }
   50% {
-    background: linear-gradient(90deg, #18bcbc, #18bc8a);
+    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
     background-size: 200% 100%;
     background-position: 0 0;
   }
   100% {
-    background: linear-gradient(90deg, #18bcbc, #18bc8a);
+    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
     background-size: 200% 100%;
     background-position: 100% 0;
   }

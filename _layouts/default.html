@@ -19,55 +19,46 @@
         <button id="cancelButton">Cancel</button>
     </div>
 </div>
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', function() {-->
-<!--        const projectList = document.querySelector('.project-list');-->
-
-<!--        // Clone the first set of project items for the loop effect-->
-<!--        const items = projectList.querySelectorAll('.project-item');-->
-<!--        const clonedItems = Array.from(items).map(item => item.cloneNode(true));-->
-<!--        clonedItems.forEach(item => projectList.appendChild(item));-->
-
-<!--        // Function to handle the scrolling-->
-<!--        function handleScroll() {-->
-<!--            // If scrolled to the bottom, reset to the top-->
-<!--            if (projectList.scrollTop + projectList.clientHeight >= projectList.scrollHeight) {-->
-<!--                projectList.scrollTop = 0;-->
-<!--            }-->
-<!--        }-->
-
-<!--        // Add the scroll event listener-->
-<!--        projectList.addEventListener('scroll', handleScroll);-->
-<!--    });-->
-<!--</script>-->
-
 <div class="container">
-    <h1>Welcome! I'm Andre</h1>
-    <p>Have a look at some of my projects.</p>
+        <header>
+            <div class='header-text'>
+                <h1>Hey! I'm Andre</h1>
+                <p>Welcome to my portfolio!</p>
+            </div>
+            <div class='social-media-container'>
+                <a href="https://github.com/andreberezin?tab=repositories" class="media-link" target="_blank" title='Github'>
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/andreberezin" class="media-link" target="_blank" title='LinkedIn'>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
 
-    <div class='button-container'>
-        <a href="https://github.com/andreberezin?tab=repositories" class="btn link" target="_blank">
-            <div class='button-content'>
-                <i class="fa-brands fa-github"></i>
-                <div class='button-text'>
-                    Github
-                </div>
-            </div>
-        </a>
-        <a href="https://www.linkedin.com/in/andreberezin" class="btn link" target="_blank">
-            <div class='button-content'>
-                <i class="fa-brands fa-linkedin-in"></i>
-                <div class='button-text'>
-                    LinkedIn
-                </div>
-            </div>
-        </a>
-    </div>
+        </header>
+
+<!--    <div class='button-container'>-->
+<!--        <a href="https://github.com/andreberezin?tab=repositories" class="btn link" target="_blank">-->
+<!--            <div class='button-content'>-->
+<!--                <i class="fa-brands fa-github"></i>-->
+<!--                <div class='button-text'>-->
+<!--                    Github-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </a>-->
+<!--        <a href="https://www.linkedin.com/in/andreberezin" class="btn link" target="_blank">-->
+<!--            <div class='button-content'>-->
+<!--                <i class="fa-brands fa-linkedin-in"></i>-->
+<!--                <div class='button-text'>-->
+<!--                    LinkedIn-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </a>-->
+<!--    </div>-->
     <!-- Featured Projects Section -->
     <h2>Featured Projects</h2>
 
 
-    <div class="project-list featured" id='project-list'>
+    <div class="project-list featured first">
         <div class="project-item">
             <div class='title-row'>
                 <a href='https://github.com/andreberezin/match-me' class='github-link' target="_blank" title='Github repository'>
@@ -76,7 +67,7 @@
                         Match-Me (Ongoing)
                     </div>
                 </a>
-                <a href='' class='website-link'>Try it out!</a>
+                <a href='' target="_blank" class='website-link' title='Live website'>Try it out!</a>
             </div>
             <p class='description'>Jammer connects musicians based on their mutual interests. Features left/right swiping, matching datapoints like genres, methods (singing, instruments etc.) </p>
             <p class='stack'> Figma | Javascript | Java | React | PostgreSQL | Spring | Spring Security | Socket.io | Cloudinary </p>
@@ -89,7 +80,7 @@
                         Racetrack - Real-Time Racing System
                     </div>
                 </a>
-                <a href='https://racetrack-ns5c.onrender.com' target="_blank" class='website-link' data-tooltip='This site may take 20-30 seconds to load due to the free-tier hosting.'>Try it out!</a>
+                <a href='https://racetrack-ns5c.onrender.com' target="_blank" class='website-link' title='Live website' data-tooltip='This site may take 20-30 seconds to load due to the free-tier hosting.'>Try it out!</a>
             </div>
             <p class='description'>A real-time system for car races. Features creating, starting, controlling and spectating races live.</p>
             <p class='stack'>Javascript | Node.js | React | Mongodb | Ngrok | Socket.io  </p>
