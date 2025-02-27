@@ -240,6 +240,8 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
 }
 
 .modal-content {
@@ -247,7 +249,13 @@ footer {
   padding: 30px;
   border-radius: 8px;
   text-align: center;
+  min-width: 300px;
+  max-width: 500px;
   color: #d5d5d5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 button {
