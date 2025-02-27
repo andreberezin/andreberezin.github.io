@@ -3,10 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  transition: all 0.3s;
 }
 
 body {
-  background: #121212;
+  background: #1c1c1c;
   color: #fff;
   text-align: center;
   padding: 50px;
@@ -19,23 +20,62 @@ body {
 
 .container h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+.container h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .container p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #bbb;
+  margin-bottom: 0.25rem;
+  color: #d5d5d5;
   width: 100%;
+}
+
+.stack {
+  font-size: 1rem;
+  margin-top: 1.5rem !important;
   text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.title-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.website-link {
+  padding: 0.5rem;
 }
 
 .project-list {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  max-height: 400px;
+  max-height: 350px;
   overflow-y: scroll;
+  padding: 0 0.75rem 0 0.75rem;
 }
 
 .project-item {
@@ -46,33 +86,59 @@ body {
 }
 
 .project-item:hover {
-  background: #5a5a5a;
+  background: #494949;
   transition: all 0.3s;
-  box-shadow: 0 0 5px 5px #5a5a5a;
+  box-shadow: 0 0 5px 5px #494949;
 }
 
-.project-item a {
-  color: #1effbb;
+a {
   font-size: 1.1rem;
   text-decoration: none;
-  font-weight: bold;
   text-align: center;
 }
 
-.project-item a:hover {
-  color: rgba(30, 255, 187, 0.7);
+.project-item .github-link {
+  color: #1effbb;
+  font-weight: bold;
+}
+
+.project-item .github-link:hover {
+  color: #48fbe9;
+}
+
+.project-item .website-link {
+  color: #18bc8a;
+}
+
+.project-item .website-link:hover {
+  color: #48fbe9;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
   padding: 12px 25px;
   text-decoration: none;
   font-size: 1rem;
   border-radius: 8px;
   transition: 0.3s;
-  max-width: 40%;
-  height: 1.5rem;
+  width: 20%;
+  height: 2rem;
+  color: black !important;
+}
+
+.btn:hover {
+  background: #48fbe9;
+  box-shadow: 0 0 2px 2px #48fbe9;
 }
 
 .link {
