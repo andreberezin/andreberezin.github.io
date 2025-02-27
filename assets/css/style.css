@@ -114,7 +114,6 @@ img {
   padding: 0.75rem;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth; /* Optional: Smooth scrolling */
-
 }
 
 .project-item {
@@ -284,4 +283,14 @@ button {
 
 #cancelButton:hover {
   background-color: #ff5353;
+}
+
+.project-list::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background-color: rgba(0, 0, 0, .3);
 }
