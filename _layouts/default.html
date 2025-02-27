@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andre's Portfolio</title>
+    <script type="text/javascript" src="../assets/js/scripts.js" defer ></script>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
+<!-- Modal HTML (Add this in your body) -->
+<div id="loadingModal" class="modal">
+    <div class="modal-content">
+        <p id='modal-text'>This site may take 20-30 seconds to load.
+            <br> Thank you for your patience!</p>
+        <button id="proceedButton">Proceed</button>
+        <button id="cancelButton">Cancel</button>
+    </div>
+</div>
 <!--<script>-->
 <!--    document.addEventListener('DOMContentLoaded', function() {-->
 <!--        const projectList = document.querySelector('.project-list');-->
@@ -64,7 +74,7 @@
                         Racetrack - Real-Time Racing System
                     </div>
                 </a>
-                <a href='https://racetrack-ns5c.onrender.com' target="_blank" class='website-link'>Try it out!</a>
+                <a href='https://racetrack-ns5c.onrender.com' target="_blank" class='website-link' data-tooltip='This site may take 20-30 seconds to load due to the free-tier hosting.'>Try it out!</a>
             </div>
             <p class='description'>A real-time system for car races. Features creating, starting, controlling and spectating races live.</p>
             <p class='stack'>Javascript | Node.js | React | Mongodb | Ngrok | Socket.io  </p>
