@@ -1,50 +1,70 @@
-<!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre's Portfolio</title>
+    <link rel="stylesheet" href="../assets/css/style.scss">
+</head>
+<body>
 
-{% seo %}
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    {% include head-custom.html %}
-  </head>
-  <body>
-      <div id="header">
-        <nav>
-          <ul>
-            <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
-            {% if site.show_downloads %}
-              <li class="downloads"><a href="{{ site.github.zip_url }}">ZIP</a></li>
-              <li class="downloads"><a href="{{ site.github.tar_url }}">TAR</a></li>
-              <li class="title">DOWNLOADS</li>
-            {% endif %}
-          </ul>
-        </nav>
-      </div><!-- end header -->
+<div class="container">
+    <h1>Welcome! I'm Andre</h1>
+    <p>Have a look at some of my projects.</p>
 
-    <div class="wrapper">
+    <a href="https://github.com/andreberezin?tab=repositories" class="btn link" target="_blank">Github</a>
+    <a href="https://www.linkedin.com/andreberezin" class="btn link" target="_blank">LinkedIn</a>
 
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
+    <!-- Featured Projects Section -->
+    <h2>🚀 Featured Projects</h2>
+
+
+    <div class="project-list featured">
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/match-me" target="_blank">💖 Match-Me (Ongoing)</a>
+            <p>A matchmaking app called Jammer that connects musicians based on mutual interests. Features left/right swiping, matching datapoints like genres, methods (singing, instruments etc.) </p>
+            <p> Figma | Javascript | Java | React | PostgreSQL | Spring | Spring Security | Socket.io | Cloudinary </p>
+        </div>
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/racetrack" target="_blank">🏁 Racetrack - Real-Time Racing System</a>
+            <p>A real-time system for car races, where users can create, start, control and spectate races in various ways.</p>
+            <p>Javascript | Node.js | React | Mongodb | Ngrok | Socket.io  </p>
+        </div>
+    </div>
+
+    <!-- Other Projects Section -->
+    <h2>📌 Other Projects</h2>
+    <div class="project-list other">
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/movie-api" target="_blank">🎬 MovieAPI</a>
+            <p>A Spring Boot movie database API with filtering, pagination, and actor-genre relationships.</p>
+            <p>Java | Spring</p>
         </div>
 
-        {{ content }}
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/itinerary-prettifier" target="_blank">🛫 Itinerary Prettifier</a>
+            <p>A command-line tool that formats raw flight itinerary data into a customer-friendly format.</p>
+            <p>Java</p>
+        </div>
 
-      </section>
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/cypher" target="_blank">🔐 Cypher Notes</a>
+            <p>A secure note-taking app with encryption to protect sensitive information.</p>
+            <p>Golang</p>
+        </div>
 
+        <div class="project-item">
+            <a href="https://github.com/andreberezin/notes" target="_blank">📝 Notes Editor</a>
+            <p>A minimalist text editor with markdown support and real-time saving.</p>
+            <p>Golang</p>
+        </div>
     </div>
-  </body>
+</div>
+
+<footer>
+    <p>© 2025 Andre Berezin | andreberezin@outlook.com</p>
+</footer>
+
+</body>
 </html>
+
