@@ -1,4 +1,4 @@
-@import "{{ site.theme }}";
+//@import "{{ site.theme }}";
 
 * {
   margin: 0;
@@ -31,7 +31,7 @@ body {
     }
 
     .project-list {
-      margin-top: 30px;
+      //margin-top: 30px;
       text-align: left;
       max-width: 600px;
       margin: auto;
