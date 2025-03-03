@@ -321,13 +321,24 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+.modal-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 button {
   cursor: pointer;
 }
 
 #proceedButton {
   padding: 10px 20px;
-  margin: 25px 25px 0px 25px;
+  /*margin: 25px 25px 0px 25px;*/
+  /*margin-right: auto;*/
   background-color: #71ff71;
   color: black;
   border: 1px solid black;
@@ -340,7 +351,8 @@ button {
 
 #cancelButton {
   padding: 10px 20px;
-  margin: 25px 25px 0px 25px;
+  /*margin: 25px 25px 0px 25px;*/
+  /*margin-left: auto;*/
   background-color: #ff7171;
   color: black;
   border: 1px solid black;
