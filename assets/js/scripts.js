@@ -8,12 +8,14 @@
 // 	});
 // });
 
+const modal = document.getElementById('loadingModal');
+
 document.querySelectorAll('.website-link').forEach(link => {
 	link.addEventListener('click', function(event) {
 		event.preventDefault(); // Prevent immediate navigation
 
 		// Show the modal
-		const modal = document.getElementById('loadingModal');
+		// const modal = document.getElementById('loadingModal');
 		const proceedButton = document.getElementById('proceedButton');
 		const cancelButton = document.getElementById('cancelButton');
 
@@ -21,7 +23,8 @@ document.querySelectorAll('.website-link').forEach(link => {
 
 		// Handle the Proceed button click
 		proceedButton.onclick = function() {
-			window.location.href = link.href; // Proceed to the link
+			window.open(link.href, '_blank'); // Proceed to the link in a new tab
+			modal.style.display = 'none'; // Close the modal
 		};
 
 		// Handle the Cancel button click
@@ -30,3 +33,16 @@ document.querySelectorAll('.website-link').forEach(link => {
 		};
 	});
 });
+
+document.querySelectorAll('.modal').forEach(modal => {
+	modal.addEventListener('click', function(event) {
+		event.preventDefault(); // Prevent immediate navigation
+
+		// display none if clicked outside of modal element
+		if(event.target === modal) {
+			modal.style.display = 'none';
+		}
+
+	});
+});
+
