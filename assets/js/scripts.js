@@ -1,15 +1,6 @@
-
-
-// document.querySelectorAll('.website-link').forEach(link => {
-// 	link.addEventListener('click', function(event) {
-// 		if (!confirm('This site may take 20-30 seconds to load \n Thank you for your patience!')) {
-// 			event.preventDefault();  // Prevent navigation if the user cancels
-// 		}
-// 	});
-// });
-
 const modal = document.getElementById('loadingModal');
 
+// pop-up to confirm is user wants to proceed to the link
 document.querySelectorAll('.website-link').forEach(link => {
 	link.addEventListener('click', function(event) {
 		event.preventDefault(); // Prevent immediate navigation
@@ -34,6 +25,7 @@ document.querySelectorAll('.website-link').forEach(link => {
 	});
 });
 
+// close modal if user clicks outside the modal
 document.querySelectorAll('.modal').forEach(modal => {
 	modal.addEventListener('click', function(event) {
 		event.preventDefault(); // Prevent immediate navigation
@@ -46,3 +38,36 @@ document.querySelectorAll('.modal').forEach(modal => {
 	});
 });
 
+
+const switchLangButton = document.getElementById('switch-lang');
+const htmlTag = document.documentElement;
+
+// language toggle function
+function toggleLanguage() {
+	const currentLang = localStorage.getItem("lang") || "en";
+	const newLang = currentLang === "en" ? "ee" : "en";
+
+	localStorage.setItem("lang", newLang);
+
+	document.querySelectorAll("[lang='en']").forEach(element => {
+		if (element !== htmlTag) {
+			element.hidden = !element.hidden;
+		}
+	});
+
+	document.querySelectorAll("[lang='ee']").forEach(element => {
+		if (element !== htmlTag) {
+			element.hidden = !element.hidden;
+		}
+	});
+
+}
+// get language from local storage
+document.addEventListener("DOMContentLoaded", () => {
+	const savedLang = localStorage.getItem("lang") || "en";
+	if (savedLang === "ee") {
+		toggleLanguage();
+	}
+})
+
+switchLangButton.addEventListener("click", toggleLanguage);
