@@ -365,10 +365,10 @@ button {
   position: absolute;
   left: 10px;
   bottom: 0;
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
   width: fit-content;
-  margin: 0;
+  margin: 0 !important;
   padding: 5px;
   display: flex;
   align-items: center;
