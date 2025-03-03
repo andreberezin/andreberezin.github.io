@@ -46,20 +46,6 @@ header {
   scale: 1.1;
 }
 
-#switch-lang {
-  position: absolute;
-  left: 10px;
-  bottom: 0;
-  background: none;
-  border: none;
-  width: fit-content;
-  margin: 0;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .flag {
   margin: 0;
 }
@@ -336,12 +322,12 @@ footer {
 }
 
 button {
-  padding: 10px 20px;
-  margin: 25px 25px 0px 25px;
   cursor: pointer;
 }
 
 #proceedButton {
+  padding: 10px 20px;
+  margin: 25px 25px 0px 25px;
   background-color: #71ff71;
   color: black;
   border: 1px solid black;
@@ -353,6 +339,8 @@ button {
 }
 
 #cancelButton {
+  padding: 10px 20px;
+  margin: 25px 25px 0px 25px;
   background-color: #ff7171;
   color: black;
   border: 1px solid black;
@@ -373,6 +361,16 @@ button {
   background-color: rgba(0, 0, 0, .3);
 }
 
-/*:lang(ee) {*/
-/*  display: none;*/
-/*}*/
+#switch-lang {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  background: none;
+  border: none;
+  width: fit-content;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
