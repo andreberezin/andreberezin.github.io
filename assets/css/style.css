@@ -82,6 +82,10 @@ header {
   text-align: left;
 }
 
+.my-role {
+  margin-top: 10px;
+}
+
 .title-row {
   display: flex;
   flex-direction: row;
@@ -96,14 +100,22 @@ img {
   margin-right: 0.5rem;
 }
 
+.title-wrapper {
+  position: relative;
+  --data-type: attr(data-type-en);
+}
+
 .title {
   text-align: center;
   display: flex;
   align-items: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .title:hover {
-  scale: 1.075;
+  transform: scale(1.075)
 }
 
 .title > p{
@@ -114,6 +126,24 @@ img {
 .title > p:hover {
   color: #48fbe9;
 }
+
+
+.title-wrapper::after {
+  content: var(--data-type);
+  position: absolute;
+  bottom: -5px;
+  right: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  /*transition: transform 0s !important;*/
+  transform: none; /* Ensure no inherited scale */
+  /*transform-origin: top left;*/
+}
+
+/*.title:hover::after {*/
+/*  transform: scale(calc(1 / 1.075));*/
+/*  transform-origin: top left;*/
+/*}*/
 
 .website-link {
   padding: 0.5rem;
@@ -127,44 +157,16 @@ img {
   letter-spacing: 0.05rem;
 }
 
-
-/*.website-link::after {*/
-/*  content: attr(data-tooltip);*/
-/*  position: absolute;*/
-/*  bottom: 100%;*/
-/*  left: 50%;*/
-/*  transform: translateX(-50%);*/
-/*  padding: 8px;*/
-/*  background-color: #333;*/
-/*  color: white;*/
-/*  border-radius: 5px;*/
-/*  font-size: 14px;*/
-/*  opacity: 0;*/
-/*  visibility: hidden;*/
-/*  transition: opacity 0.3s, visibility 0.3s;*/
-/*  white-space: nowrap;*/
-/*  overflow: visible;*/
-/*}*/
-
-/*.website-link:hover::after {*/
-/*  opacity: 1;*/
-/*  visibility: visible;*/
-/*}*/
-
 .project-list {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  max-height: 300px;
+  max-height: 350px;
   overflow-y: scroll;
   padding: 0.75rem;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth; /* Optional: Smooth scrolling */
 }
-
-/*.first {*/
-/*  border-top: 1px solid white;*/
-/*}*/
 
 .project-item {
   background: #222;
@@ -186,15 +188,6 @@ a {
   text-decoration: none;
   text-align: center;
 }
-
-/*.project-item .github-link {*/
-/*  color: #1effbb;*/
-/*  font-weight: bold;*/
-/*}*/
-
-/*.project-item .github-link:hover {*/
-/*  color: #48fbe9;*/
-/*}*/
 
 .button-container {
   display: flex;
@@ -223,13 +216,6 @@ a {
   background: #48fbe9;
   box-shadow: 0 0 2px 2px #48fbe9;
 }
-
-/*.fa-brands {*/
-/*  font-size: 1.5rem;*/
-/*  width: 2rem;*/
-/*  color: black;*/
-/*  margin-right: 0.3rem;*/
-/*}*/
 
 .button-content {
   display: flex;

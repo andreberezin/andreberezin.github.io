@@ -61,6 +61,15 @@ function toggleLanguage() {
 		}
 	});
 
+	// edit the project type language (.title-wrapper::after)
+	document.querySelectorAll('.title-wrapper').forEach(wrapper => {
+		if (newLang === 'en') {
+			wrapper.style.setProperty('--data-type', `"${wrapper.getAttribute('data-type-en')}"`);
+		} else {
+			wrapper.style.setProperty('--data-type', `"${wrapper.getAttribute('data-type-ee')}"`);
+		}
+	});
+
 }
 // get language from local storage
 document.addEventListener("DOMContentLoaded", () => {
