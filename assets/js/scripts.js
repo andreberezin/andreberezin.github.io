@@ -42,41 +42,44 @@ document.querySelectorAll('.modal').forEach(modal => {
 const switchLangButton = document.getElementById('switch-lang');
 const htmlTag = document.documentElement;
 
-// language toggle function
-function toggleLanguage() {
-	const currentLang = localStorage.getItem("lang") || "en";
-	const newLang = currentLang === "en" ? "ee" : "en";
-
-	localStorage.setItem("lang", newLang);
-
+// Function to update language-based properties
+function updateLanguageElements(lang) {
+	// Toggle visibility of language elements
 	document.querySelectorAll("[lang='en']").forEach(element => {
 		if (element !== htmlTag) {
-			element.hidden = !element.hidden;
+			element.hidden = lang !== "en";
 		}
 	});
 
 	document.querySelectorAll("[lang='ee']").forEach(element => {
 		if (element !== htmlTag) {
-			element.hidden = !element.hidden;
+			element.hidden = lang !== "ee";
 		}
 	});
 
-	// edit the project type language (.title-wrapper::after)
+	// Update --data-type property on .title-wrapper elements
 	document.querySelectorAll('.title-wrapper').forEach(wrapper => {
-		if (newLang === 'en') {
-			wrapper.style.setProperty('--data-type', `"${wrapper.getAttribute('data-type-en')}"`);
-		} else {
-			wrapper.style.setProperty('--data-type', `"${wrapper.getAttribute('data-type-ee')}"`);
+		const dataType = lang === 'en' ? wrapper.getAttribute('data-type-en') : wrapper.getAttribute('data-type-ee');
+		if (dataType) {
+			wrapper.style.setProperty('--data-type', `"${dataType}"`);
 		}
 	});
-
 }
-// get language from local storage
+
+// Language toggle function
+function toggleLanguage() {
+	const currentLang = localStorage.getItem("lang") || "en";
+	const newLang = currentLang === "en" ? "ee" : "en";
+
+	localStorage.setItem("lang", newLang);
+	updateLanguageElements(newLang);
+}
+
+// Apply the saved language when the page loads
 document.addEventListener("DOMContentLoaded", () => {
 	const savedLang = localStorage.getItem("lang") || "en";
-	if (savedLang === "ee") {
-		toggleLanguage();
-	}
-})
+	updateLanguageElements(savedLang);
+});
 
+// Add event listener for the language switch button
 switchLangButton.addEventListener("click", toggleLanguage);
