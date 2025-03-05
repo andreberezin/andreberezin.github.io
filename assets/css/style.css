@@ -100,18 +100,13 @@ img {
   margin-right: 0.5rem;
 }
 
-.title-wrapper {
-  position: relative;
-  --data-type: attr(data-type-en);
-}
-
 .title {
   text-align: center;
   display: flex;
   align-items: center;
-  position: relative;
-  transition: transform 0.3s ease;
-  will-change: transform;
+  /*position: relative;*/
+  /*transition: transform 0.3s ease;*/
+  /*will-change: transform;*/
 }
 
 .title:hover {
@@ -128,22 +123,26 @@ img {
 }
 
 
+.title-wrapper {
+  position: relative;
+  --data-type: attr(data-type-en);
+}
+
+
 .title-wrapper::after {
   content: var(--data-type);
   position: absolute;
-  bottom: -5px;
-  right: 5px;
+  bottom: 0;
+  left: 55px;
   color: #fff;
   font-size: 0.8rem;
-  /*transition: transform 0s !important;*/
   transform: none; /* Ensure no inherited scale */
-  /*transform-origin: top left;*/
 }
 
-/*.title:hover::after {*/
-/*  transform: scale(calc(1 / 1.075));*/
-/*  transform-origin: top left;*/
-/*}*/
+.title:hover::after {
+  transform: scale(calc(1 / 1.075));
+  transform-origin: top left;
+}
 
 .website-link {
   padding: 0.5rem;
