@@ -94,6 +94,14 @@ header {
   margin-bottom: 1rem;
 }
 
+.github-link {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+}
+
 img {
   width: 2.5rem;
   height: 2.5rem;
@@ -104,6 +112,11 @@ img {
   text-align: center;
   display: flex;
   align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
   /*position: relative;*/
   /*transition: transform 0.3s ease;*/
   /*will-change: transform;*/
@@ -116,6 +129,8 @@ img {
 .title > p{
   color: #1effbb;
   font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .title > p:hover {
@@ -126,6 +141,11 @@ img {
 .title-wrapper {
   position: relative;
   --data-type: attr(data-type-en);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
 }
 
 
@@ -370,4 +390,53 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .container h1 {
+    max-width: 300px;
+    font-size: 2rem;
+  }
+  .header-text p {
+    font-size: 0.9rem;
+  }
+  .title-row {
+    margin-bottom: 0.5rem;
+  }
+  .social-media-container {
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  .title-row {
+    flex-direction: column;
+  }
+
+  .github-link {
+    align-self: flex-start;
+  }
+
+  .website-link {
+    align-self: flex-end;
+    padding: 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5px;
+  }
+  .container h1 {
+    width: 300px;
+    font-size: 1.75rem;
+  }
+  .social-media-container {
+    position: static;
+    flex-direction: row;
+  }
+  #switch-lang {
+    bottom: 0;
+  }
+
 }
