@@ -10,7 +10,7 @@ body {
   background: #1c1c1c;
   color: #fff;
   text-align: center;
-  padding: 50px;
+  padding: 35px;
 }
 
 header {
@@ -418,6 +418,7 @@ button {
   .website-link {
     align-self: flex-end;
     padding: 0.2rem;
+    width: fit-content;
   }
 }
 
@@ -437,6 +438,15 @@ button {
   }
   #switch-lang {
     bottom: 0;
+  }
+
+  .flag {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
   }
 
 }
