@@ -199,7 +199,7 @@ img {
 
   @starting-style {
     opacity: 0;
-    translate: 300px 0;
+    translate: 120vw 0;
   }
 }
 
@@ -209,7 +209,7 @@ img {
 
   @starting-style {
     opacity: 0;
-    translate: -300px 0;
+    translate: -120vw 0;
   }
 }
 
@@ -219,7 +219,7 @@ img {
 
   @starting-style {
     opacity: 0;
-    translate: -300px 0;
+    translate: -120vw 0;
   }
 }
 
@@ -229,7 +229,7 @@ img {
 
   @starting-style {
     opacity: 0;
-    translate: 300px 0;
+    translate: 120vw 0;
   }
 }
 
