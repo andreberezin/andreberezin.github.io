@@ -43,17 +43,21 @@ header {
   font-size: 2rem;
   padding: 5px;
   margin-right: 0.3rem;
-  animation: blink-background 2s infinite;
   color: transparent;
+  background-image: linear-gradient(90deg, #18bcbc, #ff4242, #18bcbc);
+  background-size: 500% 100%;
   background-clip: text;
+  -webkit-background-clip: text; /* For Safari support */
+  animation: blink-background 2s linear infinite;
 }
 
 .fa-brands:hover {
-  scale: 1.1;
+  scale: 0.9;
 }
 
 .flag {
   margin: 0;
+  height: fit-content;
 }
 
 .container {
@@ -171,15 +175,36 @@ img {
 }
 
 .website-link {
+  color: #18bcbc;
   padding: 0.5rem;
-  animation: blink 2s linear infinite;
+  /*animation: blink 2s linear infinite;*/
   width: 8rem;
 }
 
+.website-link > span {
+  position: relative;
+}
+
+.website-link > span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.75);
+  transition: width 0.1s linear;
+}
+
+.website-link:hover > span::after {
+  width: 100%;
+}
+
 .website-link:hover {
-  scale: 1.075;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
+  /*scale: 1.075;*/
+  /*font-weight: 500;*/
+  /*letter-spacing: 0.05rem;*/
 }
 
 .project-list {
@@ -274,7 +299,7 @@ a {
   width: 20%;
   height: 2rem;
   color: black !important;
-  animation: blink-background 2s infinite;
+  /*animation: blink-background 2s infinite;*/
 }
 
 .btn:hover {
@@ -318,25 +343,36 @@ footer {
 /* animations /*/
 @keyframes blink  {
   0% { color: #18bc8a;}
+  25% { color: #18bcbc;}
   50% { color: #18bcbc;}
+  75% { color: #18bcbc;}
   100% { color: #18bc8a;}
 }
 
+/*@keyframes blink-background {*/
+/*  0% {*/
+/*    background-image: linear-gradient(90deg, #18bcbc, #ff4242);*/
+/*    background-size: 200% 100%;*/
+/*    background-position: 100% 0;*/
+/*  }*/
+/*  50% {*/
+/*    background-image: linear-gradient(90deg, #18bcbc, #ff4242);*/
+/*    background-size: 200% 100%;*/
+/*    background-position: 0 0;*/
+/*  }*/
+/*  100% {*/
+/*    background-image: linear-gradient(90deg, #18bcbc, #ff4242);*/
+/*    background-size: 200% 100%;*/
+/*    background-position: 100% 0;*/
+/*  }*/
+/*}*/
+
 @keyframes blink-background {
   0% {
-    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
-    background-size: 200% 100%;
-    background-position: 100% 0;
-  }
-  50% {
-    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
-    background-size: 200% 100%;
-    background-position: 0 0;
+    background-position: 0% 50%;
   }
   100% {
-    background-image: linear-gradient(90deg, #18bcbc, #18bc8a);
-    background-size: 200% 100%;
-    background-position: 100% 0;
+    background-position: 100% 50%;
   }
 }
 
@@ -430,12 +466,17 @@ button {
   bottom: 0;
   background: none !important;
   border: none !important;
-  width: fit-content;
+  width: 40px;
+  height: 40px;
   margin: 0 !important;
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#switch-lang:hover > img {
+  scale: 0.90;
 }
 
 @media only screen and (max-width: 600px) {
