@@ -7,10 +7,13 @@
 }
 
 body {
-  background: #1c1c1c; // #1c1c1c
+  background: hsla(0, 0%, 5%, 1);
   color: #fff;
   text-align: center;
   padding: 35px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 header {
@@ -22,7 +25,7 @@ header {
   justify-content: center;
   position: relative;
   opacity: 1;
-  color: white;
+  color: hsla(0, 0%, 95%, 1);
 
   @starting-style {
     opacity: 0;
@@ -64,6 +67,8 @@ header {
 .container {
   max-width: 800px;
   margin: auto;
+  height: 100%;
+  overflow: hidden;
 }
 
 .container h1 {
@@ -215,7 +220,7 @@ img {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  max-height: 350px;
+  height: 35%;
   overflow-y: scroll;
   padding: 0.75rem;
   scroll-snap-type: y proximity;
@@ -263,7 +268,7 @@ img {
 }
 
 .project-item {
-  background: #222;
+  background: hsla(0, 0%, 15%, 1);;
   padding: 15px;
   margin: 10px 0;
   border-radius: 8px;
@@ -338,7 +343,8 @@ a {
 }
 
 footer {
-  margin-top: 50px;
+  /*margin-top: 50px;*/
+  /*padding-bottom: 50px;*/
   font-size: 0.9rem;
   color: #777;
 }
