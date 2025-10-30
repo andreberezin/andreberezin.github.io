@@ -222,7 +222,7 @@ img {
   scroll-behavior: smooth; /* Optional: Smooth scrolling */
 }
 
-.featured {
+#featured {
   opacity: 1;
   transition: translate 0.5s ease;
 
@@ -242,7 +242,7 @@ img {
   }
 }
 
-.other {
+#other {
   opacity: 1;
   transition: translate 0.5s ease;
 

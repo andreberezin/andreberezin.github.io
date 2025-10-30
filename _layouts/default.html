@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title lang='ee'>Andre's Portfolio</title>
     <title lang='en'>Andre Portfoolio</title>
-<!--    <script type="text/javascript" src="../assets/js/scripts.js" defer ></script>-->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="text/javascript" src="../assets/js/renderProjectItem.js"></script>
 
 </head>
 
@@ -63,70 +63,82 @@
     <h2 lang='en' class='featured-heading'>Featured Projects</h2>
     <h2 lang='ee' class='featured-heading' hidden>Põhiprojektid</h2>
 
-    <div class="project-list featured first">
+    <div class="project-list first" id='featured'>
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/web-game' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2025)' data-type-ee='tiimiprojekt (2025)'>
-                        <div class='title' data-type='team project'>
-                            <img src='../assets/icons/match-me-icon.svg' alt='Jammer' class='icon jammer'/>
-                            <p class='project-name' lang='en'>Jammer</p>
-                            <p class='project-name' lang='ee' hidden>Jammer</p>
-                        </div>
-                    </div>
-                </a>
-                <a href='https://match-me-20pb.onrender.com' target="_blank" class='website-link' title='Live website'>
-                    <span lang='en'>Try it out!</span>
-                    <span lang='ee' hidden>Katseta!</span>
-                </a>
-            </div>
-            <p class='description' lang='en'>Jammer connects musicians based on their mutual interests and characteristics. This project is not finished yet. </p>
-            <p class='description' lang='ee' hidden>Jammer ühendab muusikuid vastavalt ühistele huvidele ja omadustele. Projekt ei ole veel lõpetatud. </p>
-            <p class='description my-role' lang='en'>My role was building the UX/UI in Figma, converting the design to front-end code, connecting the necessary points to backend API-s, setting up Docker and deploying the front-end, back-end and database in Render.</p>
-            <p class='description my-role' lang='ee' hidden>Minu roll oli UX/UI disaini loomine Figmas, selle ümberkirjutamine front-end koodi, vajalike punktide ühendamine back-end API-dega, Dockeri seadistamine ning front-endi, back-endi ja andmebaasi seadistamine Renderis.</p>
-            <p class='stack'> Figma | Javascript | Java | React | PostgreSQL | Spring | Spring Security | Socket.io | Cloudinary </p>
-        </div>
+        <script>
+            renderProjectItem({
+                featured: true,
+                titleEN: 'Ghostwriter',
+                titleEE: 'Ghostwriter',
+                githubLink: 'https://github.com/andreberezin/prompt-fiction',
+                year: 2025,
+                isTeamProject: false,
+                imgSrc: '../assets/icons/ghostwriter-icon.png',
+                renderLink: 'https://ghostwriter-sc3m.onrender.com',
+                descriptionProjectEN: 'Ghostwriter is an intelligent content generation tool that transforms user inputs into ready-to-use content using Google Gemini AI API. Currently generates blog posts and emails.',
+                descriptionProjectEE: 'Ghostwriter on intelligentne sisu loomise tööriist, mis muudab kasutaja sisestused kasutatavaks sisuks, kasutades Google Gemini AI API-d. Hetkel genereerib blogipostitusi ja e-kirju.',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' React | Typescript | Spring Boot | Java | WebSockets '
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/web-game' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2025)' data-type-ee='tiimiprojekt (2025)'>
-                        <div class='title' data-type='team project'>
-                            <img src='../assets/icons/cube-wars.png' alt='Cube Wars' class='icon cube-wars'/>
-                            <p class='project-name' lang='en'>Cube Wars</p>
-                            <p class='project-name' lang='ee' hidden>Cube Wars</p>
-                        </div>
-                    </div>
-                </a>
-                <a href='https://web-game-y5r6.onrender.com' target="_blank" class='website-link' title='Live website'>
-                    <span lang='en'>Try it out!</span>
-                    <span lang='ee' hidden>Katseta!</span>
-                </a>
-            </div>
-            <p class='description' lang='en'>Cube wars is a competitive multiplayer 2D shooter game built without the html canvas element.</p>
-            <p class='description' lang='ee' hidden>Cube Wars on võistluslik mitme mängijaga 2D-laskmismäng, mis on loodud ilma HTML canvas elemendita. </p>
-            <p class='description my-role' lang='en'>My role was building most of the front-end, game timer, menus, scoring system, some of the model and service classes, some of the socket connections etc.</p>
-            <p class='description my-role' lang='ee' hidden>Minu roll oli luua suurem osa <i>front-end</i> koodist, menüüd, punktisüsteem, mõned <i>model</i> ja <i>service</i> klassid, mõned <i>socket</i> ühendused jms.</p>
-            <p class='stack'> Javascript | React | Vite | Socket.io | Node.js | Express | Awilix </p>
-        </div>
+            })
+        </script>
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/dotjs' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2025)' data-type-ee='tiimiprojekt (2025)'>
-                        <div class='title' data-type='team project'>
-                            <img src='../assets/icons/dotjs-icon.png' alt='dotjs' class='icon dotjs'/>
-                            <p class='project-name' lang='en'>Dotjs</p>
-                            <p class='project-name' lang='ee' hidden>Dotjs</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <p class='description' lang='en'>Dotjs is a lightweight, reactive frontend framework built from scratch using vanilla JavaScript. It provides component-based architecture, reactive state management, virtual DOM implementation, and client-side routing capabilities. It is based on the book "Build a Frontend Web Framework (From Scratch)" by Angel Sola Orbaiceta</p>
-            <p class='description' lang='ee' hidden>Dotjs on kerge ja reaktiivne frontend raamistik, mis on kirjutatd Javascriptis. Projekt põhineb raamatul "Build a Frontend Web Framework (From Scratch)" Angel Sola Orbaiceta</p>
-            <p class='stack'>Javascript | Vitest </p>
-        </div>
+        <script>
+            renderProjectItem({
+                featured: true,
+                titleEN: 'Jammer',
+                titleEE: 'Jammer',
+                githubLink: 'https://github.com/andreberezin/match-me',
+                year: 2025,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/match-me-icon.svg',
+                renderLink: 'https://match-me-20pb.onrender.com',
+                descriptionProjectEN: 'Jammer connects musicians based on their mutual interests and characteristics. This project is not finished yet. ',
+                descriptionProjectEE: 'Jammer ühendab muusikuid vastavalt ühistele huvidele ja omadustele. Projekt ei ole veel lõpetatud.',
+                descriptionMyRoleEN: 'My role was building the UX/UI in Figma, converting the design to front-end code, connecting the necessary points to backend API-s, setting up Docker and deploying the front-end, back-end and database in Render.',
+                descriptionMyRoleEE: 'Minu roll oli UX/UI disaini loomine Figmas, selle ümberkirjutamine front-end koodi, vajalike punktide ühendamine back-end API-dega, Dockeri seadistamine ning front-endi, back-endi ja andmebaasi seadistamine Renderis.',
+                stack: ' Figma | Javascript | Java | React | PostgreSQL | Spring | Spring Security | Socket.io | Cloudinary '
+
+        })
+        </script>
+
+        <script>
+            renderProjectItem({
+                featured: true,
+                titleEN: 'Web game',
+                titleEE: 'Web game',
+                githubLink: 'https://github.com/andreberezin/web-game',
+                year: 2025,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/cube-wars.png',
+                renderLink: 'https://web-game-y5r6.onrender.com',
+                descriptionProjectEN: 'Cube wars is a competitive multiplayer 2D shooter game built without the html canvas element.',
+                descriptionProjectEE: 'Cube Wars on võistluslik mitme mängijaga 2D-laskmismäng, mis on loodud ilma HTML canvas elemendita.',
+                descriptionMyRoleEN: 'My role was building most of the front-end, game timer, menus, scoring system, some of the model and service classes, some of the socket connections etc.',
+                descriptionMyRoleEE: `Minu roll oli luua suurem osa <i>front-end</i> koodist, menüüd, punktisüsteem, mõned <i>model</i> ja <i>service</i> klassid, mõned <i>socket</i> ühendused jms.`,
+                stack: ' Javascript | React | Vite | Socket.io | Node.js | Express | Awilix '
+
+        })
+        </script>
+
+        <script>
+            renderProjectItem({
+                featured: true,
+                titleEN: 'DotJS',
+                titleEE: 'DotJS',
+                githubLink: 'https://github.com/andreberezin/dotjs',
+                year: 2025,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/dotjs-icon.png',
+                renderLink: '',
+                descriptionProjectEN: 'Dotjs is a lightweight, reactive frontend framework built from scratch using vanilla JavaScript. It provides component-based architecture, reactive state management, virtual DOM implementation, and client-side routing capabilities. It is based on the book "Build a Frontend Web Framework (From Scratch)" by Angel Sola Orbaiceta',
+                descriptionProjectEE: 'Dotjs on kerge ja reaktiivne frontend raamistik, mis on kirjutatd Javascriptis. Projekt põhineb raamatul "Build a Frontend Web Framework (From Scratch)" Angel Sola Orbaiceta',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' Javascript | Vitest '
+        })
+        </script>
 
         <div class='empty-item'></div>
     </div>
@@ -135,97 +147,103 @@
     <h2 lang='en' class='other-heading'>Other Projects</h2>
     <h2 lang='ee' class='other-heading' hidden>Teised projektid</h2>
 
-    <div class="project-list other">
+    <div class="project-list" id='other'>
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/racetrack' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2024)' data-type-ee='tiimiprojekt (2024)'>
-                        <div class='title' data-type='team project'>
-                            <img src='../assets/icons/f1-icon.png' alt='Racetrack' class='icon'/>
-                            <p class='project-name' lang='en'>Beachside Racetrack</p>
-                            <p class='project-name' lang='ee' hidden>Beachside Racetrack</p>
-                        </div>
-                    </div>
-                </a>
-                <a href='https://racetrack-ns5c.onrender.com' target="_blank" class='website-link' title='Live website'>
-                    <span lang='en'>Try it out!</span>
-                    <span lang='ee' hidden>Katseta!</span>
-                </a>
-            </div>
-            <p class='description' lang='en'>A real-time system for car races. Features creating, starting, controlling and spectating races live.</p>
-            <p class='description' lang='ee' hidden>Veebileht, mis võimaldab reaalajas hallata võidusõite. Võimaldab võidusõitude loomist, alustamist, kontrollimist ning jälgimist vastavalt rollile.</p>
-            <p class='description my-role' lang='en'>My contribution was building the back-end and front-end to /next-race, /race-countdown and /lap-line-tracker. I set up Ngrok, built /settings, added full-screen and light/dark theme functionality and made finishing touches on the UX/UI.</p>
-            <p class='description my-role' lang='ee' hidden>Minu roll oli /next-race, /race-countdown ja /lap-line-tracker <i>back-endi</i> ja <i>front-endi</i> ehitamine. Seadsin üles Ngroki, ehitasin /settings, lisasin täisekraani ja heleda/tumeda režiimi funktsionaalsuse ning täiustasin UX/UI disaini.</p>
-            <p class='stack'>Javascript | Node.js | React | Mongodb | Ngrok | Socket.io  </p>
-        </div>
+        <script>
+            renderProjectItem({
+                featured: false,
+                titleEN: 'Beachside Racetrack',
+                titleEE: 'Beachside Racetrack',
+                githubLink: 'https://github.com/andreberezin/racetrack',
+                year: 2024,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/f1-icon.png',
+                renderLink: 'https://racetrack-ns5c.onrender.com',
+                descriptionProjectEN: 'A real-time system for car races. Features creating, starting, controlling and spectating races live.',
+                descriptionProjectEE: 'Veebileht, mis võimaldab reaalajas hallata võidusõite. Võimaldab võidusõitude loomist, alustamist, kontrollimist ning jälgimist vastavalt rollile.',
+                descriptionMyRoleEN: 'My contribution was building the back-end and front-end to /next-race, /race-countdown and /lap-line-tracker. I set up Ngrok, built /settings, added full-screen and light/dark theme functionality and made finishing touches on the UX/UI.',
+                descriptionMyRoleEE: `Minu roll oli /next-race, /race-countdown ja /lap-line-tracker <i>back-endi</i> ja <i>front-endi</i> ehitamine. Seadsin üles Ngroki, ehitasin /settings, lisasin täisekraani ja heleda/tumeda režiimi funktsionaalsuse ning täiustasin UX/UI disaini.`,
+                stack: ' Javascript | Node.js | React | Mongodb | Ngrok | Socket.io '
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/movie-api' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='solo project (2024)' data-type-ee='sooloprojekt (2024)'>
-                        <div class='title'>
-                            <img src='../assets/icons/movie-icon.png' alt='Movie API' class='icon'/>
-                            <p class='project-name' lang='en'>Movie API</p>
-                            <p class='project-name' lang='ee' hidden>Filmide API</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <p class='description' lang='en'>A Spring Boot movie database API which enables searching, filtering, adding and deleting movies including associated genres and actors. </p>
-            <p class='description' lang='ee' hidden>Spring Boot filmide andmebaasi API, mis võimaldab filmide ning seotud žanrite ja näitlejate otsimist, lisamist, täiustamist ja kustutamist. </p>
-            <p class='stack'>Java | Spring</p>
-        </div>
+            })
+        </script>
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/itinerary-prettifier' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='solo project (2024)' data-type-ee='sooloprojekt (2024)'>
-                        <div class='title'>
-                            <img src='../assets/icons/airplane-icon.png' alt='Itinerary Prettifier' class='icon'/>
-                            <p class='project-name' lang='en'>Itinerary Prettifier</p>
-                            <p class='project-name' lang='ee' hidden>Reisiplaani vormindaja</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <p class='description' lang='en'>A command-line tool that formats raw flight itinerary data into a more customer-friendly format.</p>
-            <p class='description' lang='ee' hidden> <i>Command-line</i> tööriist, mis vormindab lendude andmed kasutajasõbralikku formaati.</p>
-            <p class='stack'>Java</p>
-        </div>
+        <script>
+            renderProjectItem({
+                featured: false,
+                titleEN: 'Movie API',
+                titleEE: 'Filmide API',
+                githubLink: 'https://github.com/andreberezin/movie-api',
+                year: 2024,
+                isTeamProject: false,
+                imgSrc: '../assets/icons/movie-icon.png',
+                renderLink: '',
+                descriptionProjectEN: 'A Spring Boot movie database API which enables searching, filtering, adding and deleting movies including associated genres and actors. ',
+                descriptionProjectEE: 'Spring Boot filmide andmebaasi API, mis võimaldab filmide ning seotud žanrite ja näitlejate otsimist, lisamist, täiustamist ja kustutamist.',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' Java | Spring '
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/cypher' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2024)' data-type-ee='tiimiprojekt (2024)'>
-                        <div class='title'>
-                                <img src='../assets/icons/encrypt-icon.png' alt='Cypher Notes' class='icon'/>
-                            <p class='project-name' lang='en'>Cypher Notes</p>
-                            <p class='project-name' lang='ee' hidden>Märkmete krüpteerija</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <p class='description' lang='en'>A secure note-taking app with encryption to protect sensitive information.</p>
-            <p class='description' lang='ee' hidden>Turvaline märkmete tegemise rakendus, mis krüpteerib tundlikku informatsiooni.</p>
-            <p class='stack'>Golang</p>
-        </div>
+            })
+        </script>
 
-        <div class="project-item">
-            <div class='title-row'>
-                <a href='https://github.com/andreberezin/notes' class='github-link' target="_blank" title='Github repository'>
-                    <div class='title-wrapper' data-type-en='team project (2024)' data-type-ee='tiimiprojekt (2024)'>
-                        <div class='title'>
-                            <img src='../assets/icons/notes-icon.png' alt='Notes tool' class='icon'/>
-                            <p class='project-name' lang='en'>Notes tool</p>
-                            <p class='project-name' lang='ee' hidden>Märkmete haldaja</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <p class='description' lang='en'>A minimalist text editor with markdown support and real-time saving.</p>
-            <p class='description' lang='ee' hidden>Minimalistlik märkmete haldamise rakendus, mis lubab reaalajas märkmeid luua, salvestada, vaadata ja kustutada.</p>
-            <p class='stack'>Golang</p>
+        <script>
+            renderProjectItem({
+                featured: false,
+                titleEN: 'Itinerary Prettifier',
+                titleEE: 'Reisiplaani vormindaja',
+                githubLink: 'https://github.com/andreberezin/itinerary-prettifier',
+                year: 2024,
+                isTeamProject: false,
+                imgSrc: '../assets/icons/airplane-icon.png',
+                renderLink: '',
+                descriptionProjectEN: 'A command-line tool that formats raw flight itinerary data into a more customer-friendly format.',
+                descriptionProjectEE: 'CL tööriist, mis vormindab lendude andmed kasutajasõbralikku formaati.',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' Java '
+
+            })
+        </script>
+
+        <script>
+            renderProjectItem({
+                featured: false,
+                titleEN: 'Cypher Notes',
+                titleEE: 'Märkmete krüpteerija',
+                githubLink: 'https://github.com/andreberezin/cypher',
+                year: 2024,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/encrypt-icon.png',
+                renderLink: '',
+                descriptionProjectEN: 'A secure note-taking app with encryption to protect sensitive information.',
+                descriptionProjectEE: 'Turvaline märkmete tegemise rakendus, mis krüpteerib tundlikku informatsiooni.',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' Golang '
+
+            })
+        </script>
+
+        <script>
+            renderProjectItem({
+                featured: false,
+                titleEN: 'Notes tool',
+                titleEE: 'Märkmete haldaja',
+                githubLink: 'https://github.com/andreberezin/notes',
+                year: 2024,
+                isTeamProject: true,
+                imgSrc: '../assets/icons/notes-icon.png',
+                renderLink: '',
+                descriptionProjectEN: 'A minimalist text editor with markdown support and real-time saving.',
+                descriptionProjectEE: 'Minimalistlik märkmete haldamise rakendus, mis lubab reaalajas märkmeid luua, salvestada, vaadata ja kustutada.',
+                descriptionMyRoleEN: '',
+                descriptionMyRoleEE: '',
+                stack: ' Golang '
+
+            })
+        </script>
+
         </div>
 
         <div class='empty-item'></div>
@@ -238,7 +256,8 @@
 
 </body>
 
-<script type="text/javascript" src="../assets/js/scripts.js"></script>
+<script type="text/javascript" src="../assets/js/modals.js"></script>
+<script type="text/javascript" src="../assets/js/languageToggle.js"></script>
 
 </html>
 
